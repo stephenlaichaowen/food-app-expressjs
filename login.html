@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Food App | Splash Screen</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <script src="main.js" async defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <img class="logo" src="assets/logo.svg" alt="logo">
+    <form>
+      <!-- <div class="btn-group">
+        <button class="btn btn-login">Log In</button>
+        <button class="btn btn-signup">Sign Up</button>
+      </div> -->
+      <div class="btn-group">
+        <div class="btn btn-login">Log In</div>
+        <div class="btn btn-signup">Sign Up</div>
+      </div>
+      <div class="input-group">
+        <input class="input-email" type="email" placeholder="Enter email or username">
+        <input class="input-password" type="password" placeholder="Password">
+      </div>
+      <p class="text text-forget">Forgot Password?</p>
+      <button class="btn btn-submit">Log in</button>
+      <p class="text text-or">OR</p>
+      <div class="social-icons">
+        <div class="icon facebook">
+          <img src="assets/facebook.svg" alt="social icon">
+        </div>
+        <div class="icon twitter">
+          <img src="assets/twitter.svg" alt="social icon">
+          
+        </div>
+        <div class="icon google">
+          <img src="assets/google.png" alt="social icon">
+        </div>
+      </div>
+    </form>
+    <img class="vegetables" src="assets/veges.svg" alt="vegetables image">
+  </div>
+</body>
+</html>
+
+<script>
+  // const page = document.querySelector('container')
+  // page.addEventListener('click', () => {
+    
+    // })
+    
+    </script>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+  body {
+    text-align: center;
+    background: white;
+    display: flex;
+    justify-content: center;
+    /* font: normal normal 600 12px/18px Poppins; */
+    font-family: Poppins;
+  }
+
+  .logo {
+    margin: 55px 0;
+    width: 108px;
+    height: 46px;
+  }
+
+  .container {
+    /* background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box; */
+    background: #eaeaf5;
+    opacity: 1;
+    height: 812px;
+    width: 375px;
+    overflow: hidden;
+    padding: 0 30px;
+    position: relative;
+    background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box;
+  }
+
+  form {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #CDCCF14D;
+    border-radius: 34px;
+    padding: 56px 43px 50px;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 56px 0; */
+    border: 2px solid #EAEAF5;
+    border-radius: 22px;
+  }
+
+  .btn {
+    /* width: 112px;
+    height: 28px; */
+    color: red;
+    /* border: 1px solid; */
+    /* font-size: 16px; */
+    /* outline: none; */
+    /* border: none; */
+    padding: 10px 30px;
+    font-size: 12px;
+    /* background: #ff0036; */
+    /* display: inline-block; */
+    /* background: red; */
+  }
+
+  .btn-login, .btn-signup {
+    /* background: #FF0036 0% 0% no-repeat padding-box; */
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: red;
+    border-radius: 22px;
+    padding: 12px;
+    border: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  .text {
+    color: #A8A7A7;
+    
+  }
+
+  .text-or {
+    font-size: 12px;
+    margin: 36px 0 36px;
+  }
+
+  .text-forget {
+    /* border: 1px solid; */
+    font-size: 10px;
+    margin: 0 0 55px 0;
+    text-align: right;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .icon {
+    border: 2px solid #EAEAF5;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    width: 60px;
+    height: 60px;
+  }
+
+  .input-group {
+    margin: 55px 0 0 0;
+    /* border: 1px solid; */
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #EAEAF5;
+    color: #A8A7A7;
+    /* margin-bottom: 32px; */
+    padding-bottom: 5px; 
+  }
+
+  .input-email {
+    margin-bottom: 32px;
+  }
+
+  .input-password {
+    margin-bottom: 17px;
+  }
+
+  ::placeholder {
+    color: #A8A7A7;
+  }
+
+  .vegetables {
+    position: absolute;
+    top: 687px;
+    left: 162px;
+  }
+</style>

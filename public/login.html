@@ -12,7 +12,6 @@
 </head>
 
 <body onresize="changeFontSize()" class="animate__animated animate__fadeIn">
-  <!-- <img class="banner" src="assets/banner.png" alt=""> -->
   <div class="container">
     <img class="logo" src="assets/logo.svg" alt="logo">
     <form>
@@ -43,6 +42,7 @@
     <img class="vegetables" src="assets/bottom-img.png" alt="vegetables image">
   </div>
 </body>
+
 </html>
 
 <script>
@@ -55,19 +55,29 @@
 
   btnSubmit.addEventListener('click', e => {
     e.preventDefault()
-    if (password.value === '' && password.value === '') { 
+    if (password.value === '' && password.value === '') {
       alert(`Please enter your email and password !`)
       return
     }
-
-    alert(`
-      email: ${email.value}
-      passowrd: ${password.value}
-    `)
-
-    email.value = ''
-    password.value = ''
+    verifyUser()
+    // window.location.href = 'member.html'
   })
+
+  async function verifyUser() {
+    const res = await fetch('/users/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value, password: password.value })
+    })
+    // const message = await res.json()
+    // console.log(message)
+
+    const { auth } = await res.json()
+    // console.log(message);
+    if (auth) window.location.href = 'member.html'
+    if (!auth) alert(`email or password is incorrect !`)
+
+  }
 </script>
 
 <style>
@@ -97,7 +107,7 @@
     margin: 2.5rem 0;
   }
 
-  .container {   
+  .container {
     height: 100%;
     padding: 0 1.875rem;
     position: relative;
@@ -204,6 +214,7 @@
 
   ::placeholder {
     color: #A8A7A7;
+    font-size
   }
 
   .vegetables {

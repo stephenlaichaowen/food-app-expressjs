@@ -42,6 +42,11 @@
     </form>
     <img class="vegetables" src="assets/bottom-img.png" alt="vegetables image">
   </div>
+  <div class="overlay">
+    <div class="alert">
+      
+    </div>
+  </div>
 </body>
 
 </html>
@@ -62,16 +67,24 @@
       alert(`Please enter your email and password !`)
       return
     }
-
-    alert(`
-      email: ${email.value}
-      passowrd: ${password.value}
-    `)
-
-    email.value = ''
-    password.value = ''
-    confirmPassword.value = ''
+    createUser()
+    window.location.href = 'login.html'
   })
+
+  async function createUser() {
+  const res = await fetch('/users/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email.value, password:password.value })
+  })
+  const { message } = await res.json()
+  console.log(message);
+  // if (auth) window.location.href = 'signup.html'
+  // if (!auth) alert(`email or password is incorrect !`)
+
+  // console.log(res);
+  // return updatedUsers
+}
 </script>
 
 <style>

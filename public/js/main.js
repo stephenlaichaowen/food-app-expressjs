@@ -11,3 +11,4 @@ function changeFontSize() {
   const deviceWidth = root.clientWidth
   root.style.fontSize = (deviceWidth / 375) * 16 + 'px'  
 }
+

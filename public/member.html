@@ -13,8 +13,88 @@
 
 <body onresize="changeFontSize()" class="animate__animated animate__fadeIn">
   <div class="container">
-    <h1>Member Section</h1>
+    <header>
+      <div class="burger-wrapper">
+        <img src="assets/burger.svg" alt="burger image">
+      </div>
+      <img src="assets/avatar.svg" alt="avatar image">
+    </header>
+    <div class="hero">
+      <div class="title-thin">Choose the</div>
+      <div class="title-bold">Food you love</div>
+    </div>
+    <div class="search-bar-wrapper">
+      <input class="search-bar" type="text" placeholder="Seach for a food item">
+    </div>
+    <div class="category">
+      <div class="title">Categories</div>
+      <div class="carousel"></div>
+    </div>
   </div>
 </body>
 
 </html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: url(assets/bg-3.png);
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.125rem 1.875rem;
+    /* border: 1px solid; */
+  }
+
+  .burger-wrapper {
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 2.375rem;
+    height: 2.375rem;
+  }
+
+  .hero {
+    font-size: 1.125rem;
+    padding: 0 1.875rem;
+  }
+
+  .title-bold {
+    font-weight: bold; 
+  }
+
+  .search-bar-wrapper {
+    margin: 1.25rem 0 3.125rem 0;
+    padding: 0 1.875rem;
+  }
+
+  .search-bar {
+    width: 100%;
+    border-radius: 1.375rem;
+    padding: 0.875rem 1.4375rem;
+    border: 0.0625rem solid #EAEAF5;
+    font-size: 0.75rem;
+  }
+
+  .category {
+    padding-left: 1.875rem;
+  }
+
+  .category .title {
+    font-size: 0.75rem;
+    font-weight: semi-bold;
+    margin-bottom: 18px;
+  }
+</style>

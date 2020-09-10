@@ -16,15 +16,16 @@
     <img class="logo" src="assets/logo.svg" alt="logo">
     <form>
       <div class="btn-group">
-        <a href="signup.html" class="btn active btn-login">Log In</a>
-        <a href="signup.html" class="btn btn-signup">Sign Up</a>
+        <a href="login.html" class="btn btn-login">Log In</a>
+        <a href="login.html" class="btn active btn-signup">Sign Up</a>
       </div>
       <div class="input-group">
         <input class="input-email" type="email" placeholder="Enter email or username">
         <input class="input-password" type="password" placeholder="Password">
+        <input class="input-confirm-password" type="password" placeholder="Confirm password">
       </div>
       <p class="text text-forget">Forgot Password?</p>
-      <button class="btn btn-submit">Log in</button>
+      <button class="btn btn-submit">Sign up</button>
       <p class="text text-or">OR</p>
       <div class="social-icons">
         <div class="icon facebook">
@@ -57,7 +58,6 @@
     display: flex;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-    /* height: 100vh; */
     min-height: 100vh;
     background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box;
   }
@@ -67,10 +67,7 @@
   }
 
   .container {
-    background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box;
-   
     height: 100%;
-    /* overflow: hidden; */
     padding: 0 1.875rem;
     position: relative;
   }
@@ -96,10 +93,6 @@
     padding: 0.1rem 0;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   .active {
     background: red;
     color: white;
@@ -114,6 +107,10 @@
     border: none;
     color: white;
     font-size: 1.125rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   .text {
@@ -170,7 +167,12 @@
   }
 
   .input-password {
+    margin-bottom: 2rem;
+  }
+
+  .input-confirm-password {
     margin-bottom: 1.0625rem;
+
   }
 
   ::placeholder {

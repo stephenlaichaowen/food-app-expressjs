@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="">
-  <script src="main.js" async defer></script>
+  <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -23,29 +23,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
 
+  html {
+    font-size: 16px;
   }
 
   body {
+    overflow: hidden;
+    height: 100vh;
     text-align: center;
     background: white;
-    display: flex;
-    justify-content: center;
+    background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box;
   }
 
   .container {
-    background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box;
-    opacity: 1;
-    height: 812px;
-    width: 375px;
-    overflow: hidden;
-    padding-top: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    height: 100%;
+
   }
 
   .vegetables {
-    position: absolute;
-    top: 626px;
-    left: 68px;
+    position: fixed;
+    bottom: -2.5rem;
+    right: -5.625rem;
   }
 </style>

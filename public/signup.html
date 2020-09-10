@@ -6,12 +6,12 @@
   <title>Food App | Splash Screen</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <script src="js/main.js" defer></script>
 </head>
 
-<body onresize="changeFontSize()">
+<body onresize="changeFontSize()" class="animate__animated animate__fadeIn">
   <div class="container">
     <img class="logo" src="assets/logo.svg" alt="logo">
     <form>
@@ -87,7 +87,9 @@
     justify-content: center;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box;
+    background: url(assets/bg.png) no-repeat;
+    background-size: cover;
+    /* background: transparent linear-gradient(25deg, #FF6787 0%, #FF0036 100%) 0% 0% no-repeat padding-box; */
   }
 
   .logo {

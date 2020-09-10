@@ -67,23 +67,22 @@
       alert(`Please enter your email and password !`)
       return
     }
+    if (password.value !== confirmPassword.value) { 
+      alert(`password is not matched, please verify again !`)
+      return
+    }
     createUser()
-    window.location.href = 'login.html'
   })
-
+  
   async function createUser() {
-  const res = await fetch('/users/register', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email.value, password:password.value })
-  })
-  const { message } = await res.json()
-  console.log(message);
-  // if (auth) window.location.href = 'signup.html'
-  // if (!auth) alert(`email or password is incorrect !`)
-
-  // console.log(res);
-  // return updatedUsers
+    const res = await fetch('/users/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value, password:password.value })
+    })
+    const { message } = await res.json()
+    console.log(message);
+    window.location.href = 'login.html'
 }
 </script>
 

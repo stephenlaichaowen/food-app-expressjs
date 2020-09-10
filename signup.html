@@ -20,12 +20,12 @@
         <a href="login.html" class="btn active btn-signup">Sign Up</a>
       </div>
       <div class="input-group">
-        <input class="input-email" type="email" placeholder="Enter email or username">
-        <input class="input-password" type="password" placeholder="Password">
-        <input class="input-confirm-password" type="password" placeholder="Confirm password">
+        <input class="input-email" required type="email" placeholder="Enter email or username">
+        <input class="input-password"  required type="password" placeholder="Password">
+        <input class="input-confirm-password" required type="password" placeholder="Confirm password">
       </div>
       <p class="text text-forget">Forgot Password?</p>
-      <button class="btn btn-submit">Sign up</button>
+      <button type="submit" class="btn btn-submit">Sign up</button>
       <p class="text text-or">OR</p>
       <div class="social-icons">
         <div class="icon facebook">
@@ -43,8 +43,31 @@
     <img class="vegetables" src="assets/bottom-img.png" alt="vegetables image">
   </div>
 </body>
-
 </html>
+
+<script>
+  const btnSubmit = document.querySelector('.btn-submit')
+  const email = document.querySelector('.input-email')
+  const password = document.querySelector('.input-password')
+  const confirmPassword = document.querySelector('.input-confirm-password')
+
+  btnSubmit.addEventListener('click', e => {
+    e.preventDefault()
+    if (password.value === '' && confirmPassword.value === '') { 
+      alert(`Please enter your email and password !`)
+      return
+    }
+    
+    alert(`
+      email: ${email.value}
+      passowrd: ${password.value}
+    `)
+
+    email.value = ''
+    password.value = ''
+    confirmPassword.value = ''
+  })
+</script>
 
 <style>
   * {
@@ -91,6 +114,7 @@
     border-radius: 1.375rem;
     width: 50%;
     padding: 0.1rem 0;
+    outline: none;
   }
 
   .active {
